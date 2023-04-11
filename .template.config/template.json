@@ -12,5 +12,24 @@
 "name": "ASP.NET Clean Architecture Solution",
 "shortName": "clean-arch",
 "sourceName": "Clean.Architecture",
-"preferNameDirectory": true
+"preferNameDirectory": true,
+   "sources": [
+    {
+      "source": "./",
+      "target": "./",
+      "exclude": [
+        "README.md",
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        ".template.config/**/*",
+        ".vs/**/*",
+        "**/*.filelist",
+        "**/*.user",
+        "**/*.lock.json",
+        "**/.git/**",
+        "*.nuspec",
+        "**/node_modules/**"
+      ]
+    }
+  ]
 }
