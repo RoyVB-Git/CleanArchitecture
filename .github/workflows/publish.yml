@@ -2,19 +2,19 @@ name: publish Ardalis.CleanArchitecture Template to nuget
 on:
   push:
     branches:
-      - main # Your default release branch
+      - VS-2022 # Your default release branch
     paths:
       - 'CleanArchitecture.nuspec'
 jobs:
   publish:
     name: list on nuget
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
       - uses: nuget/setup-nuget@v1
         with:
-          nuget-version: '5.x'
+          nuget-version: '6.x'
           
       - name: Package the template
         run: nuget pack CleanArchitecture.nuspec -NoDefaultExcludes
